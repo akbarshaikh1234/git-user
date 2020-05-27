@@ -1,3 +1,113 @@
-<p>
-  gituser-card works!
-</p>
+<div class="card-wrapper">
+  <div class="card-container">
+    <div class="collapsed-card">
+      <!-- user avatar section start -->
+      <div class="user-avatar">
+        <div class="avatar-holder">
+          <img src="/assets/images/avatar.png" alt="" class="img-responsive">
+        </div>
+      </div>
+      <!-- user avatar section end -->
+      <!-- user basic info start -->
+      <div class="user-info">
+        <p class="user-name">Varun Srinivas</p>
+        <div class="basic-profile-info">
+          <p class="profile-url">http://www.profile-url.com/user/avatar/#ddss</p>
+          <div class="user-repos">
+            <div class="sample">
+              <p>Data one : value one</p>
+              <p>Data tow : value two</p>
+            </div>
+            <div class="collapsed">
+              <button type="button" class="btn btn-outline-primary" (click)="collapse = !collapse">Collapse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- user basic info end -->
+  </div>
+  
+  <div class="collapsible-table" *ngIf="collapse">
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div><div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    <div class="table-layout">
+      <div class="repo-name">
+        data label 1
+      </div>
+      <div class="repo-name">
+        data value 1
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,89 @@
+.card-wrapper{
+    box-shadow: 0px 0px 7px 0px #6464642e;
+    border-radius: 5px;
+    .card-container {
+        background: #fafafa;
+        padding: 16px;
+        border-radius: 5px;
+        border-bottom:1px solid #6464642e;
+        position: relative;
+        .collapsed-card {
+              display: flex;
+              .user-avatar {
+                  width: 140px;
+                  .avatar-holder {
+                      width: 130px;
+                      img {
+                      border-radius: 50%;
+                      }
+                  }
+              }
+      
+              .user-info {
+                  width: 100%;
+                  .user-name {
+                      font-size: 24px;
+                      font-weight: 600;
+                  }
+      
+                  .basic-profile-info {
+                      .user-repos {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+      
+                          .sample {
+                              p {
+                                  margin: 0;
+                              }
+                          }
+                      }
+      
+                      p {
+                          color: #646464;
+                          font-size: 12px;
+                          font-weight: 500;
+                      }
+                  }
+              }
+        }
+      
+      }
+      
+      
+      .collapsible-table{
+          background:#fafafa;
+          max-height:300px;
+          overflow: auto;
+        .table-layout {
+            display: flex;
+            justify-content: space-around;
+            padding:16px 0;
+            &:nth-child(even){
+                background-color: #eeeeee;
+            }
+        }
+      }
+}
+
+
+@media(max-width:455px){
+    .user-avatar{
+        width: 90px !important;
+        .avatar-holder{
+            width: 90px !important;
+        }
+    }
+    .user-repos{
+        flex-wrap:wrap;
+        .sample{
+            width:100%;
+        }
+        .collapsed{
+            margin: 10px 0;
+            width:100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
