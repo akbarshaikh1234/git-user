@@ -14,6 +14,27 @@
     width:100%;
 }
 
+.pagination{
+    justify-content: flex-end;
+    margin: 6px 0;
+    li.page-item{
+        .page-link{
+            background:none;
+            border:none;
+            padding:0px 4px;
+            color:black;
+        }
+        &:first-child{
+            display: none !important;
+        }
+        &:last-child{
+            display: none !important;
+        }
+    }
+    .active{
+        background:#d7d7d7;
+    }
+}
 
 //scroll bar styling
 

@@ -6,11 +6,17 @@
             <div class="row">
                 <div class="col-md-12">
                     <p>
-                        <b>Total users : 260</b>
+                        <b>Total users : {{totalCount}}</b>
                     </p>
                 </div>
                 <div class="col-md-12">
-                    <gituser-card></gituser-card>
+                    <div class="card-component-container" *ngFor="let item of items">
+                        <gituser-card  [item]="item"></gituser-card>
+                    </div>
+                    
+                    <div class="pagination">
+                        <ngb-pagination [collectionSize]="totalCount" [pageSize]="3" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="false"></ngb-pagination>
+                    </div>
                 </div>
 
             </div>

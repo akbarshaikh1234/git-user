@@ -12,7 +12,7 @@
               .user-avatar {
                   width: 140px;
                   .avatar-holder {
-                      width: 130px;
+                      width: 100px;
                       img {
                       border-radius: 50%;
                       }
@@ -70,6 +70,7 @@
 @media(max-width:455px){
     .user-avatar{
         width: 90px !important;
+        margin-right: 10px;
         .avatar-holder{
             width: 90px !important;
         }

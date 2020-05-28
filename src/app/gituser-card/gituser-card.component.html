@@ -1,25 +1,25 @@
-<div class="card-wrapper">
+<div class="card-wrapper" *ngIf="item">
   <div class="card-container">
     <div class="collapsed-card">
       <!-- user avatar section start -->
       <div class="user-avatar">
         <div class="avatar-holder">
-          <img src="/assets/images/avatar.png" alt="" class="img-responsive">
+          <img [src]="item.avatar_url" alt="" class="img-responsive">
         </div>
       </div>
       <!-- user avatar section end -->
       <!-- user basic info start -->
       <div class="user-info">
-        <p class="user-name">Varun Srinivas</p>
+        <p class="user-name">{{item.login}}</p>
         <div class="basic-profile-info">
-          <p class="profile-url">http://www.profile-url.com/user/avatar/#ddss</p>
+          <p class="profile-url">{{item.url}}</p>
           <div class="user-repos">
             <div class="sample">
               <p>Data one : value one</p>
               <p>Data tow : value two</p>
             </div>
             <div class="collapsed">
-              <button type="button" class="btn btn-outline-primary" (click)="collapse = !collapse">Collapse</button>
+              <button type="button" class="btn btn-outline-primary" (click)="collapse = !collapse">{{collapse ? 'Collapse' : 'Details'}}</button>
             </div>
           </div>
         </div>
