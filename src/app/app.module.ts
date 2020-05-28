@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { GituserCardComponent } from './gituser-card/gituser-card.component';
 import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpServiceService } from './service/http-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpServiceService } from './service/http-service.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbPaginationModule,
   ],

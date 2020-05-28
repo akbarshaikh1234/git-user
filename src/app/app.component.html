@@ -1,5 +1,5 @@
 <!-- BASIC SETUP-->
-<header></header>
+<header (searchQuery)="searchQuery($event)"></header>
 <div class="container-fluid p-0">
     <div class="gituser-style-wrapper">
         <div class="col-sm-12 col-md-8 mx-auto">
@@ -11,14 +11,14 @@
                 </div>
                 <div class="col-md-12">
                     <div class="card-component-container" *ngFor="let item of items">
-                        <gituser-card  [item]="item"></gituser-card>
+                        <gituser-card [item]="item"></gituser-card>
                     </div>
-                    
+
                     <div class="pagination">
-                        <ngb-pagination [collectionSize]="totalCount" [pageSize]="3" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="false"></ngb-pagination>
+                        <ngb-pagination [collectionSize]="totalCount" [pageSize]="3" (pageChange)="changePage($event)" [maxSize]="5"
+                            [rotate]="true" [boundaryLinks]="false"></ngb-pagination>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

@@ -1,11 +1,12 @@
 <div class="container-fluid p-0">
   <div class="head-style-wrapper">
+    <form [formGroup]="formGrp">
       <div class="col-sm-12 col-md-8 mx-auto">
         <div class="row">
           <div class="col-sm-12 col-md-5">
             <div class="col-md-12 p-0 md-pm">
-              <select class="form-control" name="" id="">
-                <option hidden>Sort</option>
+              <select class="form-control" name="" id="" formControlName="sorter">
+                <option hidden value="">Sort</option>
                 <option value="asc_name">Name (A - Z)</option>
                 <option value="desc_name">Name (Z - A)</option>
                 <option value="asc_rank">Rank ↑</option>
@@ -15,12 +16,14 @@
           </div>
           <div class="col-sm-12 col-md-7">
             <div class="col-md-10 ml-auto p-0 md-pm search-group">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" formControlName="query">
               <i class="material-icons">search</i>
             </div>
           </div>
+
         </div>
       </div>
+    </form>
   </div>
-  
+
 </div>
