@@ -1,4 +1,4 @@
-<div class="card-wrapper" *ngIf="item">
+<div class="card-wrapper" *ngIf="item && item.repos.length">
   <div class="card-container">
     <div class="collapsed-card">
       <!-- user avatar section start -->
@@ -15,8 +15,8 @@
           <p class="profile-url">{{item.url}}</p>
           <div class="user-repos">
             <div class="sample">
-              <p>Data one : value one</p>
-              <p>Data tow : value two</p>
+              <p>Repository 1 : {{item?.repos[0]?.name}}</p>
+              <p>Repository 2 : {{item?.repos[1]?.name}}</p>
             </div>
             <div class="collapsed">
               <button type="button" class="btn btn-outline-primary" (click)="collapse = !collapse">{{collapse ? 'Collapse' : 'Details'}}</button>
@@ -29,83 +29,18 @@
   </div>
   
   <div class="collapsible-table" *ngIf="collapse">
-    <div class="table-layout">
+    <div class="table-layout" (click)="showSlide = i" *ngFor="let repo of item.repos;let i = index">
       <div class="repo-name">
-        data label 1
+        {{repo.name}}
       </div>
       <div class="repo-name">
-        data value 1
+        {{repo.language}}
       </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div><div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
-      </div>
-    </div>
-    <div class="table-layout">
-      <div class="repo-name">
-        data label 1
-      </div>
-      <div class="repo-name">
-        data value 1
+      <!-- click on the repos to show this additional details-->
+      <div class="additional-info" [ngClass]="{'active': showSlide === i}">
+        <div class="add-i">watcher : {{repo.watchers}}</div>
+        <div class="add-i">Forked : {{repo.forks}}</div>
+        <div class="add-i">Open Issues : {{repo.open_issues}}</div>
       </div>
     </div>
     

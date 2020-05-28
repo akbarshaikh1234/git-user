@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   formGrp:FormGroup;
 
   @Output() searchQuery = new EventEmitter<string>();
+  @Output() sorter = new EventEmitter<string>();
+
   ngOnInit() {
     this.formGrp = this.fb.group({
       sorter:[''],
@@ -30,6 +32,14 @@ export class HeaderComponent implements OnInit {
         else 
           this.searchQuery.emit('a');
       });
+
+      this.formGrp.get('sorter').valueChanges
+      .debounceTime(500)
+      .subscribe(res => {
+        this.sorter.emit(res)
+      })
   }
+
+  
 
 }
