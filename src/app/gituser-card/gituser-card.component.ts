@@ -17,10 +17,4 @@ export class GituserCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  getOnly2Repos(repo){
-    let arr = repo.slice(0,2);
-    console.log(arr)
-  }
-  
-
 }
