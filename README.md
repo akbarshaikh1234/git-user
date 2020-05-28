@@ -4,10 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project Setup
 
- -- clone git repository
- -- execute in terminal ==  $ npm i 
- -- execute in terminal (for dev) == $ ng s
- -- execute in terminal (for prod) == $ ng build --prod (development server)
+ -- clone git repository <br />
+ -- execute in terminal ==  $ npm i <br />
+ -- execute in terminal (for dev) == $ ng s <br />
+ -- execute in terminal (for prod) == $ ng build --prod (development server)<br />
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
